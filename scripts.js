@@ -10,7 +10,7 @@ window.onscroll = function(){
     let altura = document.body.scrollHeight;
     let scrollPoint = window.scrolly + window.innerHeight;
     if (scrollPoint >= altura){
-        proxImagem( item++ %max );
+        proxImagem( imagemAtual++ % max );
     }
 }
 
@@ -24,6 +24,11 @@ fetch(`img/${img}.jpg`)
         proxImgTag.src = imageObjectURL;
         document.getElementById("placeholder").appendChild(proxImgTag);
     })
+    setInterval(function(){
+        proxImagem( imagemAtual++ % max);
+    },2000);
+    
 }
+
 
 
