@@ -1,6 +1,4 @@
 
-
-
 let imagemAtual = 1;
 const imagemFinal = 80;
 
@@ -9,9 +7,11 @@ window.onload = function(){
         proxImagem(imagemAtual)
 }
 window.onscroll = function(){
-    let altura = function()
+    let altura = document.body.scrollHeight;
     let scrollPoint = window.scrolly + window.innerHeight;
-    if (scrollPoint)
+    if (scrollPoint >= altura){
+        proxImagem( item++ %max );
+    }
 }
 
 function proxImagem( img ){
