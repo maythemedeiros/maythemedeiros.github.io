@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Google Maps</title>
+	<style>
+		body{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			margin: 0px;
+			justify-content: center;
+			align-items: center;
+		}
+		#DIV_MAPA
+		{
+			width:100%;
+			height:100vh;
+		}
+
+		
+	</style>
+</head>
+<body>
+
+	<div id="DIV_MAPA">  </div>
+
+</body>
+
+<script>
+
+LAT = 0
+LON = 0
+
+function showPosition(position) 
+{
+    LAT = position.coords.latitude;
+    LON = position.coords.longitude;
+      
+}
+
+function CRIAR_MAPA() {
+
+	if (navigator.geolocation) 
+      {
+        navigator.geolocation.watchPosition(showPosition);
+		try{
+			LAT = position.coords.latitude;
+      		LON = position.coords.longitude;
+		}
+		catch(erro)
+		{
+			LAT = -26.333712707906884;
+			LON = -48.83079396260947;
+		}
+      } 
+      else 
+      { 
+        document.write("Seu navegador não suporta Geolocalização.");
+      }
+
+
+	var PROPRIEDADES= {
+	center:new google.maps.LatLng(LAT,LON),
+	zoom:18,
+	mapTypeId: google.maps.MapTypeId.HYBRID};	
+	var map = new google.maps.Map(document.getElementById("DIV_MAPA"),PROPRIEDADES);
+	
+	var MARCADOR1 = {lat:-26.333712707906884,lng:-48.83079396260947};
+	
+	var icone_marcador1 = new google.maps.Marker({position: MARCADOR1,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'sapo.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador1.setMap(map);
+
+	
+	var MARCADOR2 = {lat:-26.34000475913855,lng: -48.81569347610199};
+	
+	var icone_marcador2 = new google.maps.Marker({position: MARCADOR2,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'onibus.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador2.setMap(map);
+
+	var MARCADOR3 = {lat:-26.300712304167927,lng: -48.8407840030883};
+	
+	var icone_marcador3 = new google.maps.Marker({position: MARCADOR3,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'bandeira.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador3.setMap(map);
+
+	var MARCADOR4 = {lat:-26.252197707030735,lng: -48.8527391076328};
+	
+	var icone_marcador4 = new google.maps.Marker({position: MARCADOR4,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'estrela.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador4.setMap(map);
+
+	var MARCADOR5 = {lat:-26.303333507411917,lng: -48.848802403088136};
+	
+	var icone_marcador5 = new google.maps.Marker({position: MARCADOR5,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'estrela.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador5.setMap(map);
+
+	var MARCADOR6 = {lat:-26.29883914680458,lng:-48.848504631924115};
+	
+	var icone_marcador6 = new google.maps.Marker({position: MARCADOR6,
+	animation:google.maps.Animation.BOUNCE,
+	icon:{url:'estrela.jpg',scaledSize: new google.maps.Size(80, 80)},});
+
+	icone_marcador6.setMap(map);
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXlg-UheeFvXNuGdat0w-R5L0cVxoTr34&callback=CRIAR_MAPA">
+</script>
+
+</html>

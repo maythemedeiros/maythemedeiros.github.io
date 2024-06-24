@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacao com Jquery</title>
+
+    <script src="jquery-3.7.1.min.js"> </script>
+
+    <style>
+        .caixa
+        {
+            border:1px solid rgb(0, 0, 0);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            background-color: rgb(100, 175, 221);
+        }
+
+        @media (max-width: 414px) {
+            .caixa {
+                width: 100px;
+                height: 100px;
+                top: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .caixa {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div id="caixa" class="caixa">
+        <h3>Prova</h3>
+        <p>Prova de Jquery</p>
+
+    </div>
+
+    <button onclick="Aumentar();" id="btn_aumentar();"> Aumentar </button>
+    <button onclick="Diminuir();" id="btn_diminuir();"> Diminuir</button>
+    <button onclick="Direita();" id="btn_direita();"> Direita </button>
+
+<script>
+        function Aumentar(){
+            $('#caixa').animate({width:"500px",height:"500px"},3000)
+        }
+        function Diminuir(){
+            $('#caixa').animate({width:"200px"},200)
+            $('#caixa').animate({ height:"200px"},200)
+        }
+      
+        function Direita(){
+            $('#caixa').animate({left:"500px"},200,Alerta)
+        }
+    function Alerta(){
+        alert('movimentação terminou')
+    }
+    
+        
+</script>
+
+</body>
+</html>

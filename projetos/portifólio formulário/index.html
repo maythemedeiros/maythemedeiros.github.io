@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Escola</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form action="#" method="post">
+        <!-- Campo de texto para o nome completo -->
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+        <!-- Campo de texto para o endereço -->
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required minlength="3">
+
+        <!-- Campo de texto para o número de telefone -->
+        <label for="telefone">Número de telefone:</label>
+        <input type="text" id="telefone" name="telefone" placeholder="Digite seu número de telefone" required maxlength="15">
+
+        <!-- Campo de texto para o email -->
+        <div class="email-field"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+        <!-- Campo de confirmação de email -->
+        <label for="confirma_email">Confirme seu email:</label>
+        <input type="email" id="confirma_email" name="confirma_email" placeholder="Confirme seu email" required>
+
+        <!-- Campo de data para a data de nascimento -->
+        <label for="data_nascimento">Data de nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+        <!-- Campo de datetime-local para a data e hora de cadastro -->
+        <label for="data_cadastro">Data e hora de cadastro:</label>
+        <input type="datetime-local" id="data_cadastro" name="data_cadastro" required>
+
+        <!-- Campo de semana para a semana de cadastro -->
+        <label for="semana_cadastro">Semana de cadastro:</label>
+        <input type="week" id="semana_cadastro" name="semana_cadastro" required>
+
+        <!-- Campo de mês para o mês de cadastro -->
+        <label for="mes_cadastro">Mês de cadastro:</label>
+        <input type="month" id="mes_cadastro" name="mes_cadastro" required>
+
+        <!-- Campo de lista suspensa para a escolha da série -->
+        <label for="serie">Série:</label>
+        <select id="serie" name="serie" size="9" required>
+            <option value="1">1º Ano</option>
+            <option value="2">2º Ano</option>
+            <option value="3">3º Ano</option>
+            <option value="4">4º Ano</option>
+            <option value="5">5º Ano</option>
+            <option value="6">6º Ano</option>
+            <option value="7">7º Ano</option>
+            <option value="8">8º Ano</option>
+            <option value="9">9º Ano</option>
+        </select>
+
+        <!-- Campo de botão de rádio para a escolha do sexo -->
+        <label for="sexo">Sexo:</label>
+        <div>
+            <input type="radio" id="sexo" name="sexo">
+            <label for="sexo">Sexo:</label>
+            <input type="radio" id="feminino" name="sexo" value="feminino" required>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="outro" name="sexo" value="outro" required>
+            <label for="outro">Outro</label>
+        </div>
+
+        <!-- Campo de texto para o peso -->
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" name="peso" step="0.01" required>
+
+        <!-- Campo de texto para a altura -->
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" step="0.01" required>
+
+        <!-- Campo de botão para o envio do formulário -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>

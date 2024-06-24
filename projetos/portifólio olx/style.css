@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.pesquisar form {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 5px;
+    width: 500px;
+    height: 45px;
+}
+
+.pesquisar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: purple;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.entrar {
+    color: black;
+    width: 150px;
+    height: 45px;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.entrar:hover{
+    transform: scale(1.05);
+}
+
+.anunciar {
+    background-color: orange;
+    color: white;
+    width: 150px;
+    height: 45px;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.anunciar:hover{
+    transform: scale(1.05)
+}
+
+.dbig{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dbig2{
+    display: none;
+}
+
+.imgbig{
+    width: 1200px;
+    height: 250px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgbig:hover{
+    transform: scale(0.9);
+}
+
+#imgbig{
+    width: 1200px;
+    height: 100%;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    transition: transform 0.2s;
+}
+
+.categoria:hover{
+    transform: scale(1.05);
+}
+
+.categoria img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.categoria p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.ads {
+    justify-content: space-around;
+    padding: 20px;
+    flex-direction: row;
+    display: flex;
+    margin-top: 70px;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: calc((100% / 4) - 20px);
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 250px;
+}
+
+.ad:hover {
+    transform: scale(1.05);
+}
+
+.ad img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.ad .preco, .ad .nome {
+    margin: 0;
+    font-size: 14px;
+}
+
+.ad .preco {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #333;
+    margin-top: 100px;
+}
+
+@media (max-width: 414px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pesquisar form {
+        width: 100%;
+    }
+
+    .pesquisar input {
+        width: calc(100% - 100px);
+    }
+
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .botoes button {
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .dbig {
+        display: none;
+    }
+
+    .dbig2{
+        display: block;
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        height: 300px;
+    }
+
+    .imgbig2{
+        width: 300px;
+        height: 90px;
+        margin-top: 30px;
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.2s;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgbig2:hover{
+        transform: scale(0.9);
+    }
+    
+    #imgbig2{
+        width: 350px;
+        height: 100%;
+    }
+
+    .categorias {
+        justify-content: center;
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .categoria {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .categoria img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ads {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ad {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .ad img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
