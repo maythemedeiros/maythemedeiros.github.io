@@ -1,0 +1,23 @@
+
+
+
+body{
+    background: #d383c2;
+}
+#placeholder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transform: scale(0.5);
+}
+img{
+    align-self: center;
+    border: 10px solid #fff;
+    border-radius: 30px;
+    margin: 30px;
+    box-shadow: 0 20px 20px rgb(177, 61, 161);
+    transition: 0.5s all ease-in-out;
+}
+img:hover{
+    transform: scale(2);
+}
